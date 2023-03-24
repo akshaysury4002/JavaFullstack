@@ -1,0 +1,59 @@
+package com.as;
+
+public class RemoveChar 
+{
+	public String remChar(String s,String a)
+	{
+		String sub="";
+		String[]x=a.split("");
+		for (int i = 0; i < x.length; i++) {
+			System.out.println(x[i]);
+		}
+	
+		if(s.length()==0)
+		{
+			return "Invalid String";
+		}
+		else if(a.length()==0)
+		{
+			return "Specify the character to be removed";
+		}
+		else
+		{
+		
+		for (int i = 0; i < x.length; i++) {
+			
+			int index=s.indexOf(x[i]);
+			System.out.println(index);
+			 if(index!=-1)
+				{
+				 if(index==0)
+				 {
+					 sub+=s.substring(1);
+				 }
+				 else
+				 {
+					 sub+= s.substring(0, index);
+					 sub+=s.substring(index+1);
+					 
+				 }
+					
+					
+				}
+				else
+				{
+					return "There is no " + a +" in string";
+				}
+				if(sub.length()==0)
+					
+				{
+					return "nothing remains";
+				}
+			
+		}
+		}
+		
+		return sub;		
+	}
+
+}

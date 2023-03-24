@@ -1,0 +1,5 @@
+package com.as.generics;
+
+public class DynamicBox {
+
+}

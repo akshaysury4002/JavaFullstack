@@ -1,0 +1,38 @@
+package com.as;
+
+import java.util.*;
+
+public class CommenUniqueInArray {
+	
+	public void commenEle(int[]a,int[]b)
+	{
+		 ArrayList<Integer> common = new ArrayList<Integer>();
+		    for (int i = 0; i < a.length; i++) {
+		        for (int j = 0; j < b.length; j++) {
+		            if (a[i] == b[j]) {
+		                common.add(a[i]);
+		            }
+		        }
+		    }
+		    System.out.println("Common elements: " + common);
+		    
+		    // Find unique elements in arr1
+		    ArrayList<Integer> uniqueArr1 = new ArrayList<Integer>();
+		    for (int i = 0; i <a.length; i++) {
+		        if (!common.contains(a[i])) {
+		            uniqueArr1.add(a[i]);
+		        }
+		    }
+		    System.out.println("Unique elements in arr1: " + uniqueArr1);
+		    
+		    // Find unique elements in arr2
+		    ArrayList<Integer> uniqueArr2 = new ArrayList<Integer>();
+		    for (int i = 0; i < b.length; i++) {
+		        if (!common.contains(b[i])) {
+		            uniqueArr2.add(b[i]);
+		        }
+		    }
+		    System.out.println("Unique elements in arr2: " + uniqueArr2);
+	}
+
+}

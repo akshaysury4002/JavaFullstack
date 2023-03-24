@@ -1,0 +1,20 @@
+package com.as.cart;
+
+import com.as.item.Item;
+import com.as.user.User;
+
+public class Cart 
+{
+	 private User user;
+	 private Item[]item;
+	   
+
+	    public User getUser() {
+	        return user;
+	    }
+	    public void setUser(User user) {
+	        this.user = user;
+	    }
+	    
+
+}

@@ -1,0 +1,10 @@
+package com.as;
+
+public class App {
+	
+	public static void main(String[] args) {
+		FileHandeling fh=new FileHandeling();
+		fh.demo1();
+	}
+
+}

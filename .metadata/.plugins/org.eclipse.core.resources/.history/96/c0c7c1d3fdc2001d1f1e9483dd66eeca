@@ -1,0 +1,16 @@
+package com.as;
+
+public class App {
+	
+	public static void demos()
+	{
+		FileHandeling fh=new FileHandeling();
+		//fh.demo1();
+		fh.demo2();
+	}
+	
+	public static void main(String[] args) {
+		demos();
+	}
+
+}

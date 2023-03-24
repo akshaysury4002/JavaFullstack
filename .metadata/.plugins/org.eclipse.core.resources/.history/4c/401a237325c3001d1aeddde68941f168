@@ -1,0 +1,34 @@
+package com.as;
+
+public class App {
+
+	
+	 public static void remChar() {
+
+		 RemoveChar rc = new RemoveChar();
+	        
+//	        System.out.println("Answer (abcpqr) : "+ rc.remChar("abcxpqr", "x"));
+//	        System.out.println("There is no x in string : "+ rc.remChar("abcpqr", "x"));
+//	        System.out.println("Invalid Strinf : "+ rc.remChar("", "x"));
+//	        System.out.println("Specify the character to be removed : "+ rc.remChar("abcxpqr", ""));
+	        System.out.println("Answer (ab) : "+ rc.remChar("ax", "ab"));
+//	        System.out.println("Answer (nothing remains) : "+ rc.remChar("x", "x"));
+//	        System.out.println("Answer (x) : "+ rc.remChar("xx", "x"));
+//	        System.out.println("Answer (abcpqr) : "+ rc.remChar("axbcxpqr", "x"));
+	    }
+	 
+		public static void main(String[] args) {
+			
+//			TypeChecker checker=new TypeChecker();
+//			checker.checkType1(10);
+//			checker.checkType1("ram");
+			
+			remChar();
+			
+			
+			
+			
+		}
+	
+
+}

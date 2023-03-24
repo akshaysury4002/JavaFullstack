@@ -1,0 +1,31 @@
+package com.as;
+
+import java.util.*;
+
+public class CommenUniqueInArray {
+	
+	public void commenEle(Integer[]a,Integer[]b)
+	{
+		 ArrayList<Integer> common = new ArrayList<Integer>();
+		    for (int i = 0; i < a.length; i++) {
+		        for (int j = 0; j < b.length; j++) {
+		            if (a[i] == b[j]) {
+		                common.add(a[i]);
+		            }
+		        }
+		    }
+		    System.out.println("Common elements: " + common);
+		    
+		   Set<Integer>numbers=new HashSet<>();
+		   
+		   for (Integer el : a) {
+			numbers.add(el);
+		   }
+		   for (Integer el : b) {
+				numbers.add(el);
+			}
+		    
+		    System.out.println("Unique elements in array: " + numbers);
+	}
+
+}

@@ -1,0 +1,36 @@
+package com.as.countchar;
+
+import java.util.HashMap;
+import java.util.*;
+
+public class CountChar 
+{
+	public void charcount(String ip)
+	{
+		String s1="";
+		Map<Character, Integer> map = new HashMap<Character, Integer>();
+		char[]c=ip.toCharArray();
+		
+		
+		for (char el : c) {
+			if(map.containsKey(el))
+			{
+				map.put(el, map.get(el)+1);
+			}
+			else
+			{
+				map.put(el, 1);
+			}
+		}
+		
+		  Set<Character> keys = map.keySet();  
+	        for (Character ch : keys) {  
+	            if (map.get(ch) > 1) {  
+	                System.out.println(ch + "  is " + map.get(ch));
+	            }
+	        }
+	
+		
+	}
+
+}

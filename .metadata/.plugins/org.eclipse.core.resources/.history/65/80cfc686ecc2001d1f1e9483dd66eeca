@@ -1,0 +1,14 @@
+package com.as;
+
+import java.io.File;
+
+public class FileHandeling {
+	
+	public void demo1()
+	{
+		File file=new File("axis.docx");
+		
+		System.out.println(file.exists());
+	}
+
+}

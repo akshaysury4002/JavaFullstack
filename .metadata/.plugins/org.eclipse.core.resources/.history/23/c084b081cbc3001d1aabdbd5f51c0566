@@ -1,0 +1,31 @@
+package com.as.lambdas;
+
+public class BasicDemo {
+	
+	public void demo1()
+	{
+		//Runnable runnable=some object
+		
+		Runnable runnable=new Runnable() {
+			
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				
+			}
+		};
+	}
+
+	public void demo2()
+	{
+		//Runnable runnable=some function
+		Runnable runnable=()->{};   //lambdas
+		
+		Runnable runnable2=this::someFunction;
+	}
+	
+	// public void run() { }
+    public void someFunction() {}
+    
+    
+}

@@ -1,0 +1,11 @@
+package com.as.lambdas;
+
+public class App {
+	 public static void main(String[] args) throws Exception {
+	        System.out.println("Hello, World!");
+	        
+	        BasicDemo demo=new BasicDemo();
+	        demo.demo4();
+	    }
+
+}

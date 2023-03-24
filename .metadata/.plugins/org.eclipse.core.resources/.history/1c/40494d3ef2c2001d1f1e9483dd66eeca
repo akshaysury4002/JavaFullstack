@@ -1,0 +1,27 @@
+package com.as;
+
+import java.io.File;
+
+public class FileHandeling {
+	
+	public void demo1()
+	{
+		//File file=new File("java.txt"); //its a file
+		File file=new File("./files"); //its a directory
+		
+		if(file.isDirectory())
+		{
+			System.out.println("its a directory");
+			
+//			
+//			File sub=new File(files, "akshay");
+//			sub.mkdir();
+		}
+		else
+		{
+			System.out.println("its a file");
+		}
+		System.out.println(file.exists());
+	}
+
+}

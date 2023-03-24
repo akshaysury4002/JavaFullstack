@@ -1,0 +1,37 @@
+package com.as.funcallback;
+
+public class ImgUploader {
+	
+	public void select(CompletionCallback cb)
+	{
+		new Thread(()->{
+			simulateProcessingTime(5);
+			System.out.println("✅ Image Selection Completed ");
+		}).start();	
+		
+	}
+	public void compress(CompletionCallback cb)
+	{
+		new Thread(()->{
+			 simulateProcessingTime(8);
+	         System.out.println("✅ Image Compression Completed ");
+		});
+	}
+	public void upload(CompletionCallback cb)
+	{
+		new Thread(()->{
+			 simulateProcessingTime(3);
+	         System.out.println("✅ Image Upload Completed ");
+		});
+	}
+
+	
+	private void simulateProcessingTime(long s) {
+        try {
+            Thread.sleep(s*1000);
+        } catch (InterruptedException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+}

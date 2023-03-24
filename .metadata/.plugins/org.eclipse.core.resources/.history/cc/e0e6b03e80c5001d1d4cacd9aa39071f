@@ -1,0 +1,5 @@
+package com.as.funcallback;
+
+public interface CompletionCallback {
+
+}
