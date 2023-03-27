@@ -1,5 +1,0 @@
-package com.as.anno.genegetset;
-
-public interface GenerateAccessors {
-
-}

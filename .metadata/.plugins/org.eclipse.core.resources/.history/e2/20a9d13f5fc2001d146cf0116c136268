@@ -1,9 +1,0 @@
-package com.as.countchar;
-
-public class CharCountMain 
-{
-	public static void main(String[] args) {
-		CountChar char1=new CountChar();
-		char1.charcount("aaatttaeee");
-	}
-}
