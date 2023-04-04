@@ -5,6 +5,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.as.spring.config.AppConfig;
+import com.as.spring.excel.XLManager;
 import com.as.spring.excel.XlConfig;
 import com.as.spring.util.FileChecker;
 import com.as.spring.util.FileUtil;
@@ -49,9 +50,13 @@ public final class App {
 
         String[] names = ctx.getBeanDefinitionNames();
         System.out.println(Arrays.toString(names));
+
+        XLManager manager = ctx.getBean(XLManager.class);
+        System.out.println(manager);
+        manager.configXL();
     }
 
     public static void main(String[] args) {
-        withSpringAnnotationConfig();
+        withSpringXmlConfig();
     }
 }
