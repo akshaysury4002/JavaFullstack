@@ -135,7 +135,7 @@ class UserController {
         this.db = db;
     }
     
-    public void addUser() { db.save();  }
+    public void addUser() { db.create();  }
 }
 
 class UserMenu {
