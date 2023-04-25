@@ -1,0 +1,16 @@
+{
+  "name": "48-day",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Akshay Suryawanshi",
+  "license": "ISC",
+  "dependencies": {
+    "-": "^0.0.1",
+    "ascii-table": "^0.0.9",
+    "save": "^2.9.0"
+  }
+}

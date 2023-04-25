@@ -1,0 +1,16 @@
+{
+  "name": "file_system",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "-": "^0.0.1",
+    "ascii-table": "^0.0.9",
+    "save": "^2.9.0"
+  }
+}
