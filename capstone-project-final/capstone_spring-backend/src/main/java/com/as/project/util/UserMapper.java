@@ -1,6 +1,5 @@
 package com.as.project.util;
 
-import javax.jws.soap.SOAPBinding.Use;
 
 import org.springframework.stereotype.Component;
 

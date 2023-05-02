@@ -1,5 +1,6 @@
 package com.as.project.domain;
 
+import java.time.LocalDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,21 +19,24 @@ import lombok.ToString;
 @Getter
 @Setter
 @Entity
-public class User {
+public class Bookings {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private long id;
+    @Column(name = "bookingId")
+    private long bookingId;
 
-    @Column(name = "uname")
-    private String uname;
+    @Column(name = "vahicle_name")
+    private String bookingVname;
 
-    @Column(name = "email")
-    private String email;
+    @Column(name = "date")
+    private LocalDate date;
 
-    @Column(name = "password")
-    private String password;
+    @Column(name = "bookingFrom")
+    private String bookingFrom;
 
-    
+    @Column(name = "bookingDestination")
+    private String bookingDestination;
+
 }
+

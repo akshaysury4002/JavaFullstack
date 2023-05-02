@@ -23,6 +23,7 @@ import com.as.project.service.UserService;
 
 import lombok.AllArgsConstructor;
 
+@CrossOrigin
 @AllArgsConstructor
 @RequestMapping(value = "/user")
 @RestController
@@ -30,7 +31,7 @@ public class UserController {
 
     private final UserService service;
 
-
+    @CrossOrigin
     @PostMapping(value = "/", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<AppResponse<Integer>> createNewUser(@RequestBody UserDto dto)
     {
@@ -46,13 +47,14 @@ public class UserController {
 
     }
 
+    @CrossOrigin
     @GetMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<AppResponse<List<UserDto>>> allUsers() {
         List<UserDto> users = service.all();
 
         AppResponse<List<UserDto>> response = AppResponse.<List<UserDto>>builder()
                                                             .sts("success")
-                                                            .msg("Invoices")
+                                                            .msg("users")
                                                             .bd(users)
                                                             .build();
 
@@ -84,6 +86,20 @@ public class UserController {
                                                     .bd(sts)
                                                     .build();
 
+        return ResponseEntity.ok().body(response);
+    }
+
+
+    @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE )
+    public ResponseEntity<AppResponse<UserDto>> getUserById(@PathVariable Long id) {
+
+        final UserDto dto = service.fetchUserDetails(id);
+
+        final AppResponse<UserDto> response = AppResponse.<UserDto>builder()
+                                                        .sts("success")
+                                                        .msg("Invoice Details")
+                                                        .bd(dto)
+                                                        .build();
         return ResponseEntity.ok().body(response);
     }
 

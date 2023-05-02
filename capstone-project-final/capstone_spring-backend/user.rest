@@ -6,7 +6,7 @@ POST http://localhost:8080/user/ HTTP/1.1
 content-type: application/json
 
 {
-"id" : 9, "uname" : "ghfd", "email" : "cca@gmail", "password" : "Pass@123"
+"id" : 465, "uname" : "akshay", "email" : "dgdhdfg@gmail", "password" : "Pass@123"
 }
 
 
